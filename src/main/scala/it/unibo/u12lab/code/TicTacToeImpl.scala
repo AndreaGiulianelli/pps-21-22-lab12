@@ -14,6 +14,7 @@ class TicTacToeImpl(fileName: String) extends TicTacToe:
   createBoard()
 
   override def createBoard() =
+    // In this way we are storing/caching the board that we are creating (so can be used when needed).
     val goal = "retractall(board(_)),newboard(B),assert(board(B))"
     solveWithSuccess(engine, goal)
 

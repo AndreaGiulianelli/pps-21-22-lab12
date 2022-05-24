@@ -26,6 +26,8 @@ progress(OldBoard, _, _, NewBoard) :-
     printboard(NewBoard).
 
 progress(OBoard, Turn, Type, NBoard) :-
+    print('progress '),
+    print(Turn), nl,
     taketurn(OBoard, Turn, Type, Pos),
     setsquare(OBoard, Pos, Type, TBoard),
     printboard(TBoard),
